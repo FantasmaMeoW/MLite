@@ -1,0 +1,17 @@
+{
+    "name": "Lite",
+    "main": "index.html",
+    "window" : {
+		"icon": "./images/plutoIcon.png",
+        "toolbar": true,
+        "frame": true,
+        "width": 500,
+        "height": 700,
+		"min_width": 500,
+		"min_height": 700
+    },
+    "webKit":{
+		"page-cache": false
+	},
+    "chromium-args" : "--enable-usermedia-screen-capturing --ignore-certificate-errors"
+}
