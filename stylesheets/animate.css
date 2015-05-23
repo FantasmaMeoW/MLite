@@ -1,0 +1,23 @@
+/* line 3, ../sass/animate.scss */
+.grow {
+  background: lightgreen;
+  -webkit-transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+/* line 8, ../sass/animate.scss */
+.ready {
+  background: green;
+  -webkit-transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+/* line 13, ../sass/animate.scss */
+.getIt {
+  background: blue;
+  -webkit-transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  transition: background 0.3s;
+}

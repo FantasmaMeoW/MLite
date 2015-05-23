@@ -1,6 +1,76 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-
 @import "compass/reset";
+@import "_tool.scss";
+
+
+/* Start Page */
+html, body{
+	@include setSize(100%,100%);
+
+}
+.clickable{
+	cursor: pointer;
+}
+.pages{
+	@include setSize(100%,100%);
+	display: none;
+}
+#indexPage{
+	@include setBackground("index_bg.jpg");
+	position: relative;
+}
+.endBtn{
+	@include setSize(24px,24px);
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  background-color: red;
+  border-radius: 50%;
+
+}
+#Start{
+	@include setSize(100% , 100px);
+	position: absolute;
+	bottom: 100px;
+	> div.img{
+		@include setSize(280px , 100px);
+		background: red;
+		margin: 0 auto;
+	}
+}
+
+/* Guide Page */
+#guidePage{
+	#toGamePage{
+		@extend #Start;
+	}
+}
+
+/* GamePage */
+#GamePage{
+	background-color: #ddd;
+	position: relative;
+	#timeCount{
+		@include setSize(100%, 100px);
+		background-color: #00ac68;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	#MainGameArea{
+		@include setSize(100%,100%);
+		padding: 120px 15vw 50px 10px;
+		>ul{
+			overflow: hidden;
+			@include setSize(100%, 33.3%);
+			>li{
+				@include setSize(33.3%,100%);
+				float: left;
+				border: 1px solid;
+				&.turnRed{
+					background-color: red;
+				}
+			}
+		}
+	}
+}
+

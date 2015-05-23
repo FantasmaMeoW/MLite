@@ -2,7 +2,7 @@
     "name": "Lite",
     "main": "index.html",
     "window" : {
-		"icon": "./images/plutoIcon.png",
+		"icon": "./images/appicon.png",
         "toolbar": true,
         "frame": true,
         "width": 500,

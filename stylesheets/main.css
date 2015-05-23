@@ -1,0 +1,156 @@
+/* line 17, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* Start Page */
+/* line 6, ../sass/main.scss */
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+/* line 10, ../sass/main.scss */
+.clickable {
+  cursor: pointer;
+}
+
+/* line 13, ../sass/main.scss */
+.pages {
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+/* line 17, ../sass/main.scss */
+#indexPage {
+  background: url("../images/index_bg.jpg") 50% 50% no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* line 21, ../sass/main.scss */
+.endBtn {
+  height: 24px;
+  width: 24px;
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+/* line 30, ../sass/main.scss */
+#Start, #guidePage #toGamePage {
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  bottom: 100px;
+}
+/* line 34, ../sass/main.scss */
+#Start > div.img, #guidePage #toGamePage > div.img {
+  height: 100px;
+  width: 280px;
+  background: red;
+  margin: 0 auto;
+}
+
+/* Guide Page */
+/* GamePage */
+/* line 49, ../sass/main.scss */
+#GamePage {
+  background-color: #ddd;
+  position: relative;
+}
+/* line 52, ../sass/main.scss */
+#GamePage #timeCount {
+  height: 100px;
+  width: 100%;
+  background-color: #00ac68;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 59, ../sass/main.scss */
+#GamePage #MainGameArea {
+  height: 100%;
+  width: 100%;
+  padding: 120px 15vw 50px 10px;
+}
+/* line 62, ../sass/main.scss */
+#GamePage #MainGameArea > ul {
+  overflow: hidden;
+  height: 33.3%;
+  width: 100%;
+}
+/* line 65, ../sass/main.scss */
+#GamePage #MainGameArea > ul > li {
+  height: 100%;
+  width: 33.3%;
+  float: left;
+  border: 1px solid;
+}
+/* line 69, ../sass/main.scss */
+#GamePage #MainGameArea > ul > li.turnRed {
+  background-color: red;
+}

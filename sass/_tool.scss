@@ -1,0 +1,16 @@
+
+@mixin setSize($w, $h) {
+	height: $h;
+	width: $w;
+}
+
+@mixin setBackground($image) {
+	background: url("../images/" + $image) 50% 50% no-repeat;
+	background-size: cover;
+}
+
+@mixin toChangeState($item){	
+	-webkit-transition: $item 0.3s;
+	-moz-transition: $item 0.3s;
+	transition: $item 0.3s;
+}
