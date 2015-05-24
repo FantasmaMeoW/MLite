@@ -14,3 +14,11 @@
 	-moz-transition: $item 0.3s;
 	transition: $item 0.3s;
 }
+
+@mixin setPosition($position, $top, $right, $bottom, $left){
+		position: $position;
+		top: $top;
+		left: $left;
+		bottom: $bottom;
+		right: $right;
+}

@@ -1,23 +1,140 @@
 /* line 3, ../sass/animate.scss */
 .grow {
-  background: lightgreen;
+  background: url("../images/grow.png") 50% 50% no-repeat;
+  background-size: cover;
+  background-size: contain;
   -webkit-transition: background 0.3s;
   -moz-transition: background 0.3s;
   transition: background 0.3s;
 }
 
-/* line 8, ../sass/animate.scss */
+/* line 9, ../sass/animate.scss */
 .ready {
-  background: green;
+  background: url("../images/ready.png") 50% 50% no-repeat;
+  background-size: cover;
+  background-size: contain;
   -webkit-transition: background 0.3s;
   -moz-transition: background 0.3s;
   transition: background 0.3s;
 }
 
-/* line 13, ../sass/animate.scss */
-.getIt {
-  background: blue;
+/* line 15, ../sass/animate.scss */
+.getReady {
+  background: url("../images/getReady.png") 50% 50% no-repeat;
+  background-size: cover;
+  background-size: contain;
   -webkit-transition: background 0.3s;
   -moz-transition: background 0.3s;
   transition: background 0.3s;
+}
+
+/* line 20, ../sass/animate.scss */
+.getGrow {
+  background: url("../images/getGrow.png") 50% 50% no-repeat;
+  background-size: cover;
+  background-size: contain;
+  -webkit-transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+/* line 26, ../sass/animate.scss */
+.addTime {
+  background: url("../images/addTime.png") 50% 50% no-repeat;
+  background-size: cover;
+  background-size: contain;
+  -webkit-transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+/* line 31, ../sass/animate.scss */
+.getAddTime {
+  background: url("../images/getaddTime.png") 50% 50% no-repeat;
+  background-size: cover;
+  background-size: contain;
+  -webkit-transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+/*-------------mytada------------------*/
+@-webkit-keyframes mytada {
+  /* line 41, ../sass/animate.scss */
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  /* line 46, ../sass/animate.scss */
+  10%, 20% {
+    -webkit-transform: scale(0.9) rotate(-3deg);
+    transform: scale(0.9) rotate(-3deg);
+  }
+
+  /* line 51, ../sass/animate.scss */
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale(1.1) rotate(3deg);
+    transform: scale(1.1) rotate(3deg);
+  }
+
+  /* line 56, ../sass/animate.scss */
+  40%, 60%, 80% {
+    -webkit-transform: scale(1.1) rotate(-3deg);
+    transform: scale(1.1) rotate(-3deg);
+  }
+
+  /* line 61, ../sass/animate.scss */
+  100% {
+    -webkit-transform: scale(1) rotate(0);
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes mytada {
+  /* line 31, ../sass/cc_animate.scss */
+  /* line 69, ../sass/animate.scss */
+  0%, 49% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  /* line 75, ../sass/animate.scss */
+  50%, 55% {
+    -webkit-transform: scale(0.9) rotate(-3deg);
+    -ms-transform: scale(0.9) rotate(-3deg);
+    transform: scale(0.9) rotate(-3deg);
+  }
+
+  /* line 81, ../sass/animate.scss */
+  60%, 70%, 80%, 90% {
+    -webkit-transform: scale(1.1) rotate(3deg);
+    -ms-transform: scale(1.1) rotate(3deg);
+    transform: scale(1.1) rotate(3deg);
+  }
+
+  /* line 87, ../sass/animate.scss */
+  65%, 75%, 85% {
+    -webkit-transform: scale(1.1) rotate(-3deg);
+    -ms-transform: scale(1.1) rotate(-3deg);
+    transform: scale(1.1) rotate(-3deg);
+  }
+
+  /* line 93, ../sass/animate.scss */
+  95%,100% {
+    -webkit-transform: scale(1) rotate(0);
+    -ms-transform: scale(1) rotate(0);
+    transform: scale(1) rotate(0);
+  }
+}
+
+/* line 100, ../sass/animate.scss */
+.mytada {
+  -webkit-animation-name: tada;
+  animation-name: tada;
+  -webkit-animation-duration: 1.1s  !important;
+  animation-duration: 1.1s !important;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
 }

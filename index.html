@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="./stylesheets/bootstrap-3.3.4/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="./stylesheets/main.css" />
     <link rel="stylesheet" type="text/css" href="./stylesheets/animate.css" />
+    <link rel="stylesheet" type="text/css" href="./stylesheets/animatelib.css" />
     
 
     <script data-main="./javascripts/main.js" src="./jslib/require.js"></script>
@@ -14,24 +15,31 @@
 </head>
 <body>
 <div id='indexPage'  class='pages'>
-	
+	<div class='backgroundImg'></div>
+	<div id='About' class='clickable'></div>
 	<div id='Start'>
-		<div class="img clickable"> Start </div>
+		<div class="img clickable"></div>
+	</div>
+	<div id='aboutArea'>
+		<div class='bg'></div>
+		<div class='content'>
+			<div>Version: 0.0.1</div>
+			<div>Author: Phantom</div>
+			<div id='myGithub' class='clickable'>Contact Me</div>
+			<div class='endBtn clickable'></div>
+		</div>
 	</div>
 </div>
 
 <div id='guidePage' class='pages'>
-	this is guide page
-	<div id='backToHome' class='endBtn clickable'>
-		<div class="img"> &times </div>
-	</div>
+	<div class='backgroundImg'></div>
+	<div id='backToHome' class='endBtn clickable'></div>
 	<div id='toGamePage'>
-		<div class="img clickable"> OK </div>
+		<div class="img clickable"></div>
 	</div>
 </div>
 
 <div id='GamePage' class='pages'></div>
-<div id='ScorePage' class='pages'></div>
 
 </body>
 </html>

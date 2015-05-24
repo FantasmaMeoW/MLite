@@ -9,8 +9,6 @@ requirejs.config({
         'jquery': 'jslib/jquery-2.0.2',
         'underscore': 'jslib/underscore-min',
         'backbone': 'jslib/backbone-min',
-        'handlebars': 'jslib/handlebars-v1.3.0',
-        
     },
     shim:{
         'underscore': {
@@ -19,10 +17,7 @@ requirejs.config({
         'backbone': {
             'deps': ['jquery', 'underscore'],
             'exports':'Backbone'
-        },
-        'lib/handlebars': {
-            'exports': 'Handlebars'
-        },
+        }
     }
 });
 
@@ -62,21 +57,25 @@ requirejs([
       events: {
         "click #Start .img": "renderGuidePage",
         "click #toGamePage .img": "startPlay",
-        "click #backToHome .img": "backToHome",
+        "click #backToHome": "renderMainPage",
+        "click #aboutArea .endBtn": "renderMainPage",
+        "click #myGithub": "goGitHub",
+        "click #About": "showAbout",
         "keydown":'keyEvent',
+
+        "mouseenter #Start .img": "showAnimate",
+        "mouseleave #Start .img": "hideAnimate",        
       },
       
       renderMainPage: function() {
         $('.pages').hide();
+        $('#aboutArea').hide();
         $('#indexPage').show();
       },
 
       renderGuidePage: function(){
         $('.pages').hide();
         $('#guidePage').show();
-      },
-      backToHome: function(){
-        this.renderMainPage();
       },
       startPlay: function(){
         this.gamingView.render();
@@ -87,6 +86,20 @@ requirejs([
             var win = gui.Window.get();
             win.showDevTools();
         }
+      },
+      goGitHub: function(){
+        console.log("go");
+        var gui = require('nw.gui');
+        gui.Shell.openExternal("https://github.com/FantasmaMeoW/MLite");
+      },
+      showAbout: function(){
+        $('#aboutArea').show();
+      },
+      showAnimate: function(e){
+        $(e.currentTarget).addClass('animated mytada');
+      },
+      hideAnimate: function(e){
+        $(e.currentTarget).removeClass('animated mytada');
       }
 
     });

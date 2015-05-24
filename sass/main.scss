@@ -1,10 +1,14 @@
 @import "compass/reset";
 @import "_tool.scss";
-
+@font-face{
+	font-family: myFont;
+	src: url(../font/APRIFA.TTF) format("opentype");
+}
 
 /* Start Page */
 html, body{
 	@include setSize(100%,100%);
+	font-family: myFont;
 
 }
 .clickable{
@@ -14,63 +18,193 @@ html, body{
 	@include setSize(100%,100%);
 	display: none;
 }
+.bg{
+	background-color: black;
+	opacity: 0.57;
+	@include setSize(100%,100%);
+	@include setPosition(fixed, 0 , auto, auto, 0);
+	z-index: -1;
+}
+.content{
+	@include setSize(240px, 180px);
+	@include setPosition(absolute, 50% , auto, auto, 50%);
+	background-color: #f3f6f2;
+  border: 6px solid #8db7b1;
+  border-radius: 25px;
+  transform: translateX(-50%) translateY(-50%);
+}
+.backgroundImg{
+	@include setSize(100%, 100%);
+	background-size: auto 100% !important;
+}
 #indexPage{
 	@include setBackground("index_bg.jpg");
 	position: relative;
-}
-.endBtn{
-	@include setSize(24px,24px);
-  position: fixed;
-  top: 5px;
-  left: 5px;
-  background-color: red;
-  border-radius: 50%;
-
-}
-#Start{
-	@include setSize(100% , 100px);
-	position: absolute;
-	bottom: 100px;
-	> div.img{
-		@include setSize(280px , 100px);
-		background: red;
-		margin: 0 auto;
+	.backgroundImg{
+		@include setBackground("bgCattot.png");
 	}
-}
-
-/* Guide Page */
-#guidePage{
-	#toGamePage{
-		@extend #Start;
+	#About{
+		@include setBackground("aboutBtn.png");
+		@include setSize(48px, 52px);
+		@include setPosition(fixed, 5px , auto, auto, 5px);
+		&:hover{
+			@include setSize(53px, 57px);
+			top: 3px;
+			left: 3px;
+		}
 	}
-}
-
-/* GamePage */
-#GamePage{
-	background-color: #ddd;
-	position: relative;
-	#timeCount{
-		@include setSize(100%, 100px);
-		background-color: #00ac68;
-		position: absolute;
-		top: 0;
-		left: 0;
-	}
-	#MainGameArea{
-		@include setSize(100%,100%);
-		padding: 120px 15vw 50px 10px;
-		>ul{
-			overflow: hidden;
-			@include setSize(100%, 33.3%);
-			>li{
-				@include setSize(33.3%,100%);
-				float: left;
-				border: 1px solid;
-				&.turnRed{
-					background-color: red;
+	#aboutArea{
+		display: none;
+		@include setSize(100%, 100%);
+		@include setPosition(fixed, 0 , auto, auto, 0);
+		z-index: 10;
+		.content{
+			font-size: 24px;
+			padding: 35px 20px;
+			line-height: 30px;
+			text-align: center;
+			&:before{
+				@include setSize(100%,60px);
+				@include setBackground("about.png");
+				@include setPosition(absolute, -42px , auto, auto, 0);
+				content: '';
+				background-size: auto 100%;
+			}
+			.endBtn{
+				@include setPosition(absolute, auto , auto, -30px, 88px);
+				&:hover{
+					@include setSize(52px,52px);
+		  		bottom: -33px;
+		  		left: 86px;
+				}
+			}
+			#myGithub{
+				margin-top: 16px;
+				color: #0c65a5;	
+				&:hover{
+					text-decoration: underline;
 				}
 			}
 		}
 	}
 }
 
+.endBtn{
+	@include setSize(48px,48px);
+	@include setBackground("home.png");
+	@include setPosition(fixed, 5px , auto, auto, 5px);
+}
+#Start{
+	@include setSize(100% , 200px);
+	@include setPosition(absolute, auto , auto, 50px, 0);
+	> div.img{
+		@include setBackground("start.png");
+		@include setSize(auto , 100%);
+		max-width: 450px;
+		margin: 0 auto;
+		background-size: 100% auto;
+	}
+}
+
+/* Guide Page */
+#guidePage{
+	@include setBackground("index_bg.jpg");
+	.backgroundImg{
+		@include setBackground("hintPage.png");
+	}
+	#toGamePage{
+		@extend #Start;
+		bottom: 30px;
+		>div.img{
+			@include setBackground("Skip.png");
+			width: 280px;
+			background-size: 100% auto;
+			&:hover{
+				width: 300px;
+			}
+		}
+	}
+}
+
+/* GamePage */
+#GamePage{
+	@include setBackground("gamebackground.jpg");
+	background-size: auto 100%;
+	background-repeat: repeat-x;
+	position: relative;
+	.restartBtn{
+		@include setBackground("restart.png");
+		@include setSize(48px,48px);
+		@include setPosition(fixed, 5px , auto, auto, 60px);
+	}
+	#timeCount{
+		@include setSize(100%, 100px);
+		@include setPosition(absolute, 0 , auto, auto, 0);
+		#Score{
+			@include setBackground("timer.png");
+			@include setSize(100px,100px);
+			background-size: contain;
+			float: right;
+			padding: 47px 24px 15px 20px;
+			font-size: 40px;
+			font-weight: bold;
+			text-align: center;
+		}
+	}
+	#MainGameArea{
+		@include setSize(455px,100%);
+		padding: 120px 0 170px 10px;
+		margin: 0 auto;
+		>ul{
+			overflow: hidden;
+			@include setSize(100%, 33.3%);
+			>li{
+				@include setSize(33.3%,100%);
+				float: left;
+				&.nullGround{
+					@include setBackground("null.png");
+					background-size: contain;
+				}
+			}
+		}
+	}
+}
+#ScorePage{
+	display: none;
+	@include setSize(100%,100%);
+	@include setPosition(fixed, 0 , auto, auto, 0);
+	z-index: 10;
+	.scoreArea{
+		&:before{
+			@include setSize(100%,60px);
+			@include setBackground("score.png");
+			@include setPosition(absolute, -42px , auto, auto, 0);
+			content: '';
+			background-size: auto 100%;
+		}
+	  #end_score{
+	  	font-size: 24px;
+	  	margin-top: 65px;
+	  	text-align: center;
+	  	color: #535353;
+	  }
+	  .endBtn{
+	  	@include setSize(60px,60px);
+	  	@include setPosition(absolute, auto , auto, -30px, 38px);
+	  	&:hover{
+	  		@include setSize(70px,70px);
+	  		bottom: -35px;
+	  		left: 30px;
+	  	}
+	  }
+	  .restartBtn{	 
+	  	@include setSize(60px,60px); 	
+	  	@include setPosition(absolute, auto , 38px, -30px, auto);
+	  	&:hover{
+	  		@include setSize(70px,70px);
+	  		bottom: -35px;
+	  		right: 30px;
+	  	}
+	  }
+	}
+}

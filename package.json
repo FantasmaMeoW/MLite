@@ -12,6 +12,5 @@
     },
     "webKit":{
 		"page-cache": false
-	},
-    "chromium-args" : "--enable-usermedia-screen-capturing --ignore-certificate-errors"
+	}
 }
