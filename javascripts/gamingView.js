@@ -70,6 +70,7 @@ define([
                 // console.log(self.timmer);
                 //TODO: clean rendom add class
                 self.timmer = parseInt(self.timmer) - 1;
+                if(self.timmer <0){self.timmer = 0; }
                 var text = (self.timmer>9)? self.timmer : '0' +self.timmer;
                 $('#Score').text(text);
                 if(self.timmer == 20){
